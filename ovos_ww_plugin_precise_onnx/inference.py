@@ -17,20 +17,20 @@ class ThresholdDecoder:
     def __init__(self, mu_stds: Tuple[Tuple[float, float]], center=0.5,
                  resolution=200, min_z=-4, max_z=4):
         """
-                 Initialize the ThresholdDecoder by building an output range and cumulative distribution from provided mean/std pairs.
-                 
-                 Parameters:
-                     mu_stds (Tuple[Tuple[float, float]]): Iterable of (mean, std) pairs describing logit-normal component distributions.
-                     center (float): Center value used for piecewise scaling of decoded probabilities.
-                     resolution (int): Number of points used to discretize the output range when computing the probability density.
-                     min_z (float): Minimum z-score multiplier applied to each mean/std to determine the lower bound of the output range.
-                     max_z (float): Maximum z-score multiplier applied to each mean/std to determine the upper bound of the output range.
-                 
-                 Notes:
-                     - Computes min_out and max_out from mu_stds using min_z/max_z, stores their integer bounds and range.
-                     - Precomputes a cumulative distribution array (`cd`) by evaluating the combined probability density across the discretized range.
-                 """
-                 self.min_out = int(min(mu + min_z * std for mu, std in mu_stds))
+        Initialize the ThresholdDecoder by building an output range and cumulative distribution from provided mean/std pairs.
+        
+        Parameters:
+            mu_stds (Tuple[Tuple[float, float]]): Iterable of (mean, std) pairs describing logit-normal component distributions.
+            center (float): Center value used for piecewise scaling of decoded probabilities.
+            resolution (int): Number of points used to discretize the output range when computing the probability density.
+            min_z (float): Minimum z-score multiplier applied to each mean/std to determine the lower bound of the output range.
+            max_z (float): Maximum z-score multiplier applied to each mean/std to determine the upper bound of the output range.
+        
+        Notes:
+            - Computes min_out and max_out from mu_stds using min_z/max_z, stores their integer bounds and range.
+            - Precomputes a cumulative distribution array (`cd`) by evaluating the combined probability density across the discretized range.
+        """
+        self.min_out = int(min(mu + min_z * std for mu, std in mu_stds))
         self.max_out = int(max(mu + max_z * std for mu, std in mu_stds))
         self.out_range = self.max_out - self.min_out
         self.cd = np.cumsum(self._calc_pd(mu_stds, resolution))
