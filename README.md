@@ -12,10 +12,10 @@ Add the following to your hotwords section in mycroft.conf
 
 ```json
 "listener": {
-  "wake_word": "hey mycroft"
+  "wake_word": "hey_mycroft"
 },
 "hotwords": {
-  "hey mycroft": {
+  "hey_mycroft": {
     "module": "ovos-ww-plugin-precise-onnx",
     "model": "https://github.com/OpenVoiceOS/precise-lite-models/raw/master/wakewords/en/hey_mycroft.onnx",
     "trigger_level": 3,
