@@ -79,13 +79,7 @@ class PreciseOnnxHotwordPlugin(HotWordEngine):
             chunk (bytes): Raw audio bytes containing 16-bit signed PCM samples (int16).
         """
         audio = np.frombuffer(chunk, dtype=np.int16).astype(np.float32) / 32768.0
-
-        # Process audio frame by frame
-        for start in range(0, len(audio), self.engine.hop_samples):
-            frame = audio[start:start + self.engine.hop_samples]
-            if len(frame) < self.engine.hop_samples:
-                continue
-            self.trigger_flag = self.engine.get_prediction(frame)
+        self.trigger_flag = self.engine.get_prediction(audio)
 
     def found_wake_word(self):
         """
