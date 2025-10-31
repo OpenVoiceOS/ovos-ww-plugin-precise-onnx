@@ -1,0 +1,4 @@
+recursive-include ovos_ww_plugin_precise_onnx/ *
+include requirements.txt
+include CHANGELOG.md
+include LICENSE
