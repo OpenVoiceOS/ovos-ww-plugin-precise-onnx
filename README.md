@@ -1,10 +1,5 @@
 # precise-onnx plugin
 
-**WORK IN PROGRESS** - there are still issues
-
-----
-
-
 ## Description
 
 OpenVoiceOS wake word plugin for precise using onnxruntime instead of tflite
