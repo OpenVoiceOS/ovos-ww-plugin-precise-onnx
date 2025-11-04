@@ -1,16 +1,16 @@
 # Changelog
 
-## [0.0.3a1](https://github.com/TigreGotico/ovos-ww-plugin-precise-onnx/tree/0.0.3a1) (2025-10-31)
+## [0.0.4a1](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.0.4a1) (2025-11-04)
 
-[Full Changelog](https://github.com/TigreGotico/ovos-ww-plugin-precise-onnx/compare/V0.0.2...0.0.3a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/V0.0.3...0.0.4a1)
 
 **Merged pull requests:**
 
-- fix: featurizer [\#1](https://github.com/TigreGotico/ovos-ww-plugin-precise-onnx/pull/1) ([JarbasAl](https://github.com/JarbasAl))
+- Update ovos-plugin-manager version range [\#4](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/4) ([JarbasAl](https://github.com/JarbasAl))
 
-## [V0.0.2](https://github.com/TigreGotico/ovos-ww-plugin-precise-onnx/tree/V0.0.2) (2025-10-31)
+## [V0.0.3](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/V0.0.3) (2025-10-31)
 
-[Full Changelog](https://github.com/TigreGotico/ovos-ww-plugin-precise-onnx/compare/0.0.2...V0.0.2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.0.3...V0.0.3)
 
 
 
