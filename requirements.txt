@@ -1,4 +1,4 @@
 onnxruntime
 sonopy
-ovos-plugin-manager>=1.0.0,<2.0.0
+ovos-plugin-manager>=1.0.0,<3.0.0
 ovos-utils>=0.0.14,<1.0.0
