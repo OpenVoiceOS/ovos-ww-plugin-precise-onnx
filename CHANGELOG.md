@@ -1,16 +1,16 @@
 # Changelog
 
-## [0.0.4a1](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.0.4a1) (2025-11-04)
+## [0.1.1a1](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a1) (2025-12-19)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/V0.0.3...0.0.4a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/V0.1.0...0.1.1a1)
 
 **Merged pull requests:**
 
-- Update ovos-plugin-manager version range [\#4](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/4) ([JarbasAl](https://github.com/JarbasAl))
+- chore: Configure Renovate [\#6](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/6) ([renovate[bot]](https://github.com/apps/renovate))
 
-## [V0.0.3](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/V0.0.3) (2025-10-31)
+## [V0.1.0](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/V0.1.0) (2025-11-04)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.0.3...V0.0.3)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.0...V0.1.0)
 
 
 
