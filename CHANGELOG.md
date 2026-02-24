@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1a2](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a2) (2026-02-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.1a1...0.1.1a2)
+
+**Merged pull requests:**
+
+- Pass threshold and trigger\_level to engine [\#12](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/12) ([goldyfruit](https://github.com/goldyfruit))
+
 ## [0.1.1a1](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a1) (2025-12-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/V0.1.0...0.1.1a1)
