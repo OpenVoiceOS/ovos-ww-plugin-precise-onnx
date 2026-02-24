@@ -39,7 +39,11 @@ class PreciseOnnxHotwordPlugin(HotWordEngine):
             raise ValueError(f"Model not found: {model}")
 
         self.precise_model = expanduser(model)
-        self.engine = PreciseOnnxEngine(self.precise_model)
+        self.engine = PreciseOnnxEngine(
+            self.precise_model,
+            threshold=float(self.threshold),
+            trigger_level=int(self.trigger_level),
+        )
 
 
     @staticmethod
