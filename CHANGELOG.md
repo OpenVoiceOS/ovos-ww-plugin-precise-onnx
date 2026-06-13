@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1a3](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a3) (2026-06-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.1a2...0.1.1a3)
+
+**Merged pull requests:**
+
+- docs: standardize NGI0 Commons Fund attribution [\#14](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/14) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.1a2](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a2) (2026-02-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.1a1...0.1.1a2)
