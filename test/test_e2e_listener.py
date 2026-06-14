@@ -4,14 +4,9 @@ End-to-end ovoscope listener test for ovos-ww-plugin-precise-onnx.
 Tests:
   - Engine loads and processes audio without error.
   - Negative: command.wav (non-wakeword speech) does NOT trigger detection.
-  - Positive (best-effort): TTS "hey mycroft" audio checked for detection.
-    NOTE: The precise-onnx model is trained on real recorded speech; TTS audio
-    may not reliably trigger detection. If it does not fire the test still
-    passes (the assertion is non-strict for TTS). A real recorded wakeword
-    sample would be needed for a hard positive assertion.
+  - Positive: hey_mycroft.wav triggers the model (hard assertion).
 """
 import wave
-import struct
 from pathlib import Path
 
 import pytest
@@ -90,28 +85,24 @@ def test_negative_detection_command_wav(engine):
     )
 
 
-def test_positive_detection_hey_mycroft_tts(engine):
-    """
-    Feed TTS-synthesised "hey mycroft" audio through the engine.
+def test_positive_detection_hey_mycroft(engine):
+    """hey_mycroft.wav must trigger the wakeword engine (hard assertion).
 
-    The precise-onnx model is optimised for real recorded speech; TTS audio
-    may not reliably fire it.  This test asserts only that:
-      - The engine processes all frames without error.
-      - found_wake_word() is callable and returns a bool.
-
-    If detection DOES fire on TTS audio that is treated as a bonus and logged.
-    A strict positive assertion requires a recorded wakeword sample committed
-    as test/fixtures/hey_mycroft_real.wav.
+    The fixture is a real Microsoft edge-tts en-US-AriaNeural rendering of
+    'hey mycroft' with 0.5 s of leading silence prepended, resampled to
+    16 kHz / mono / s16le.  The precise-onnx model fires on it at default
+    threshold (sensitivity=0.5, trigger_level=3).
     """
     wav_path = FIXTURES / "hey_mycroft.wav"
-    assert wav_path.exists(), f"TTS fixture missing: {wav_path}"
+    assert wav_path.exists(), f"Positive fixture missing: {wav_path}"
 
-    # Reset before the test
+    # Fresh engine state
     engine.engine.clear()
     engine.trigger_flag = False
 
     pcm = _read_wav_pcm(wav_path)
-    frame_size = engine.engine.hop_samples * 2  # 2 bytes per int16 sample
+    # hop_samples * 2 bytes-per-int16 = one hop worth of raw PCM bytes
+    frame_size = engine.engine.hop_samples * 2
 
     detected = False
     frames = [pcm[i: i + frame_size] for i in range(0, len(pcm), frame_size)]
@@ -123,18 +114,8 @@ def test_positive_detection_hey_mycroft_tts(engine):
             detected = True
             break
 
-    # Regardless of detection, engine must still be usable
-    result = engine.found_wake_word()
-    assert isinstance(result, bool)
-
-    if detected:
-        print("\n[INFO] TTS audio triggered wakeword detection (bonus).")
-    else:
-        print(
-            "\n[INFO] TTS audio did NOT trigger wakeword detection — expected. "
-            "Commit test/fixtures/hey_mycroft_real.wav (recorded speech) for a "
-            "hard positive assertion."
-        )
-
-    # Non-strict: pass either way; the engine must not error
-    assert True
+    assert detected, (
+        "PreciseOnnxHotwordPlugin did NOT detect the wakeword in hey_mycroft.wav. "
+        "The fixture is test/fixtures/hey_mycroft.wav (16 kHz mono s16le). "
+        "Check audio format, model path, or threshold config."
+    )
