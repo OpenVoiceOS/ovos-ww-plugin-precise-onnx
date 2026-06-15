@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/HEAD)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.1a3...HEAD)
+
+**Merged pull requests:**
+
+- test: ovoscope listener e2e \(precise-onnx wakeword\) [\#16](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/16) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.1a3](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a3) (2026-06-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.1a2...0.1.1a3)
