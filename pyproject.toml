@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-ww-plugin-precise-onnx"
+dynamic = ["version"]
+description = "A wake word plugin for OpenVoiceOS"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [{name = "JarbasAi", email = "jarbasai@mailfence.com"}]
+requires-python = ">=3.9"
+
+keywords = [
+    "mycroft",
+    "ovos",
+    "plugin",
+    "wake",
+    "word",
+]
+dependencies = [
+    "onnxruntime",
+    "sonopy",
+    "ovos-plugin-manager>=2.1.0,<3.0.0",
+    "ovos-utils>=0.0.14,<1.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest<9",
+    "ovoscope>=0.19.0a1,<1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx"
+Repository = "https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx"
+
+[project.entry-points."opm.wake_word"]
+ovos-ww-plugin-precise-onnx = "ovos_ww_plugin_precise_onnx:PreciseOnnxHotwordPlugin"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["ovos_ww_plugin_precise_onnx*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "ovos_ww_plugin_precise_onnx.version.__version__"}
