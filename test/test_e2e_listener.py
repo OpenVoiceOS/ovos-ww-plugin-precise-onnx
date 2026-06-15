@@ -20,7 +20,6 @@ from ovoscope.listener import get_mini_listener  # noqa: E402
 from ovos_ww_plugin_precise_onnx import PreciseOnnxHotwordPlugin  # noqa: E402
 
 FIXTURES = Path(__file__).parent / "fixtures"
-MODEL_PATH = Path.home() / ".local/share/precise-onnx/hey_mycroft.onnx"
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -33,10 +32,10 @@ def _read_wav_pcm(path: Path) -> bytes:
 
 
 def _make_engine() -> PreciseOnnxHotwordPlugin:
-    """Instantiate the plugin using the locally cached model (no network)."""
+    """Instantiate the plugin, downloading the default hey_mycroft model on first use."""
     return PreciseOnnxHotwordPlugin(
         key_phrase="hey mycroft",
-        config={"model": str(MODEL_PATH), "trigger_level": 3, "sensitivity": 0.5},
+        config={"trigger_level": 3, "sensitivity": 0.5},
     )
 
 
@@ -47,8 +46,6 @@ def _make_engine() -> PreciseOnnxHotwordPlugin:
 @pytest.fixture(scope="module")
 def engine():
     """Shared engine instance (loading ONNX once per module)."""
-    if not MODEL_PATH.exists():
-        pytest.skip(f"Cached model not found: {MODEL_PATH}")
     return _make_engine()
 
 
@@ -57,9 +54,7 @@ def engine():
 # ---------------------------------------------------------------------------
 
 def test_engine_loads():
-    """Engine instantiates without error using cached local model."""
-    if not MODEL_PATH.exists():
-        pytest.skip(f"Cached model not found: {MODEL_PATH}")
+    """Engine instantiates without error, downloading the default model."""
     eng = _make_engine()
     assert eng is not None
     assert eng.engine is not None
