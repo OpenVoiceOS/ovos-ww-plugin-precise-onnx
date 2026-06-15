@@ -11,13 +11,8 @@ from pathlib import Path
 
 import pytest
 
-ovoscope = pytest.importorskip("ovoscope", reason="ovoscope not installed")
-plugin_mod = pytest.importorskip(
-    "ovos_ww_plugin_precise_onnx", reason="ovos-ww-plugin-precise-onnx not installed"
-)
-
-from ovoscope.listener import get_mini_listener  # noqa: E402
-from ovos_ww_plugin_precise_onnx import PreciseOnnxHotwordPlugin  # noqa: E402
+from ovoscope.listener import get_mini_listener
+from ovos_ww_plugin_precise_onnx import PreciseOnnxHotwordPlugin
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
