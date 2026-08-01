@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- docs: rewrite README in Simplified Technical English [\#21](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/21) ([JarbasAl](https://github.com/JarbasAl))
 - test: ovoscope listener e2e \(precise-onnx wakeword\) [\#16](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/16) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.1.1a3](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a3) (2026-06-13)
