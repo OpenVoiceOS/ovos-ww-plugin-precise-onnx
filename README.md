@@ -1,10 +1,8 @@
-# precise-onnx plugin
+# ovos-ww-plugin-precise-onnx
 
----
+A wake word plugin for [OpenVoiceOS](https://openvoiceos.org). It runs Precise-style wake word models with `onnxruntime` instead of `tflite`.
 
-OpenVoiceOS wake word plugin for precise using onnxruntime instead of tflite
-
-download pre-trained [precise-lite-models](https://github.com/OpenVoiceOS/precise-lite-models)
+Download pre-trained models from [OpenVoiceOS/precise-lite-models](https://github.com/OpenVoiceOS/precise-lite-models).
 
 ---
 
@@ -18,7 +16,7 @@ pip install ovos_ww_plugin_precise_onnx
 
 ## Configuration
 
-Add the following to your hotwords section in mycroft.conf 
+Add the plugin to the `hotwords` section of `mycroft.conf`.
 
 ```json
 "listener": {
@@ -34,7 +32,15 @@ Add the following to your hotwords section in mycroft.conf
 }
 ```
 
-Get community models [here](https://github.com/OpenVoiceOS/precise-lite-models)
+Get community models from [OpenVoiceOS/precise-lite-models](https://github.com/OpenVoiceOS/precise-lite-models).
+
+---
+
+## Related projects
+
+- [OpenVoiceOS/precise-lite-models](https://github.com/OpenVoiceOS/precise-lite-models): pre-trained and community wake word models for this plugin.
+- [OpenVoiceOS/ovos-plugin-manager](https://github.com/OpenVoiceOS/ovos-plugin-manager): loads and manages this plugin at runtime.
+- [OpenVoiceOS/ovos-dinkum-listener](https://github.com/OpenVoiceOS/ovos-dinkum-listener): the listener service that uses wake word plugins like this one.
 
 ---
 
