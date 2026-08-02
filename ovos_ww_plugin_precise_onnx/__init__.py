@@ -30,7 +30,7 @@ class PreciseOnnxHotwordPlugin(HotWordEngine):
         self.trigger_level = self.config.get('trigger_level', 3)
         self.threshold = self.config.get('sensitivity', 0.5)
 
-        default_model = "https://github.com/OpenVoiceOS/precise-onnx-models/raw/master/wakewords/en/hey_mycroft.onnx"
+        default_model = "https://github.com/OpenVoiceOS/precise-lite-models/raw/master/wakewords/en/hey_mycroft.onnx"
         model = self.config.get('model', default_model)
         if model.startswith("http"):
             model = self.download_model(model)
@@ -39,7 +39,11 @@ class PreciseOnnxHotwordPlugin(HotWordEngine):
             raise ValueError(f"Model not found: {model}")
 
         self.precise_model = expanduser(model)
-        self.engine = PreciseOnnxEngine(self.precise_model)
+        self.engine = PreciseOnnxEngine(
+            self.precise_model,
+            threshold=float(self.threshold),
+            trigger_level=int(self.trigger_level),
+        )
 
 
     @staticmethod

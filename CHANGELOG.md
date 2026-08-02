@@ -1,16 +1,42 @@
 # Changelog
 
-## [0.0.4a1](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.0.4a1) (2025-11-04)
+## [0.1.1a8](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a8) (2026-08-02)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/V0.0.3...0.0.4a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.1a3...0.1.1a8)
 
 **Merged pull requests:**
 
-- Update ovos-plugin-manager version range [\#4](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/4) ([JarbasAl](https://github.com/JarbasAl))
+- ci: migrate release workflow to shared OpenVoiceOS automations [\#22](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/22) ([JarbasAl](https://github.com/JarbasAl))
+- docs: rewrite README in Simplified Technical English [\#21](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/21) ([JarbasAl](https://github.com/JarbasAl))
+- test: ovoscope listener e2e \(precise-onnx wakeword\) [\#16](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/16) ([JarbasAl](https://github.com/JarbasAl))
 
-## [V0.0.3](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/V0.0.3) (2025-10-31)
+## [0.1.1a3](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a3) (2026-06-13)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.0.3...V0.0.3)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.1a2...0.1.1a3)
+
+**Merged pull requests:**
+
+- docs: standardize NGI0 Commons Fund attribution [\#14](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/14) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.1.1a2](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a2) (2026-02-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.1a1...0.1.1a2)
+
+**Merged pull requests:**
+
+- Pass threshold and trigger\_level to engine [\#12](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/12) ([goldyfruit](https://github.com/goldyfruit))
+
+## [0.1.1a1](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a1) (2025-12-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/V0.1.0...0.1.1a1)
+
+**Merged pull requests:**
+
+- chore: Configure Renovate [\#6](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/6) ([renovate[bot]](https://github.com/apps/renovate))
+
+## [V0.1.0](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/V0.1.0) (2025-11-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.0...V0.1.0)
 
 
 
