@@ -1,11 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/HEAD)
+## [0.1.1a8](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a8) (2026-08-02)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.1a3...HEAD)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.1a3...0.1.1a8)
 
 **Merged pull requests:**
 
+- ci: migrate release workflow to shared OpenVoiceOS automations [\#22](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/22) ([JarbasAl](https://github.com/JarbasAl))
 - docs: rewrite README in Simplified Technical English [\#21](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/21) ([JarbasAl](https://github.com/JarbasAl))
 - test: ovoscope listener e2e \(precise-onnx wakeword\) [\#16](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/16) ([JarbasAl](https://github.com/JarbasAl))
 
