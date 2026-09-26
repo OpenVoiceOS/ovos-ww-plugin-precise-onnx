@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1a9](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a9) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.1a8...0.1.1a9)
+
+**Merged pull requests:**
+
+- Update dependency pytest to v9 [\#17](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/17) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.1.1a8](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a8) (2026-08-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.1a3...0.1.1a8)
