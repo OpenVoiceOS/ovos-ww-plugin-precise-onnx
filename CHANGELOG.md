@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2a1](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.2a1) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.1a9...0.1.2a1)
+
+**Merged pull requests:**
+
+- fix\(ci\): publish stable through the shared workflow, not setup.py [\#26](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/pull/26) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.1.1a9](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/tree/0.1.1a9) (2026-09-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-ww-plugin-precise-onnx/compare/0.1.1a8...0.1.1a9)
